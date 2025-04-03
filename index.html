@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Chinese Food</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8dc;
+            padding: 20px;
+        }
+        h1 {
+            color: #d2691e;
+            text-align: center;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        .menu-item button {
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #a0522d;
+        }
+        .cart {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #d2691e;
+            background-color: #fffacd;
+        }
+        .cart h2 {
+            color: #a0522d;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .checkout-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .checkout-button:hover {
+            background-color: #a0522d;
+        }
+        #totalPrice {
+            font-weight: bold;
+            color: #d2691e;
+        }
+        #confirmation {
+            display: none;
+            color: green;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Order Your Favorite Chinese Food! 🍜</h1>
+
+    <div id="menu">
+        <div class="menu-item">
+            <span>Sweet and Sour Chicken</span>
+            <span>$8.99</span>
+            <button onclick="addToCart('Sweet and Sour Chicken', 8.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span>Kung Pao Chicken</span>
+            <span>$9.99</span>
+            <button onclick="addToCart('Kung Pao Chicken', 9.99)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Wonton</span>
+            <span>$5.55</span>
+            <button onclick="addToCart('Wonton', 5.55)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Noodles</span>
+            <span>$17.65</span>
+            <button onclick="addToCart('Noodles', 17.65)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Dumplings</span>
+            <span>$10.50</span>
+            <button onclick="addToCart('Dumplings', 10.50)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Half Bejing Roast Duck </span>
+            <span>$28.50</span>
+            <button onclick="addToCart('Half Bejing Roast Duck', 28.50)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Bejing Roast Duck </span>
+            <span>$58.50</span>
+            <button onclick="addToCart('Bejing Roast Duck', 58.50)">Add to Cart</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <span>Egg Fried Rice</span>
+            <span>$7.99</span>
+            <button onclick="addToCart('Egg Fried Rice', 9.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span>Fried Rice</span>
+            <span>$4.50</span>
+            <button onclick="addToCart('Fried Rice', 7.50)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span>Spring Rolls</span>
+            <span>$4.50</span>
+            <button onclick="addToCart('Spring Rolls', 4.50)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+        <h2>Your Cart 🛒</h2>
+        <div id="cartItems">
+            <p>Your cart is empty!</p>
+        </div>
+        <p>Total: $<span id="totalPrice">0.00</span></p>
+        <button class="checkout-button" onclick="checkout()">Checkout</button>
+        <p id="confirmation">🎉 Your order has been placed! Enjoy your meal! 🎉</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
